@@ -108,6 +108,7 @@ h2{font-family:var(--serif); font-weight:600; font-size:30px; line-height:1.2; c
 .thumb{aspect-ratio:16/10; max-width:100%; background:#fff; border-bottom:1px solid var(--rule); overflow:hidden}
 .thumb img{display:block; width:100%; height:100%; object-fit:contain; padding:8px; transition:transform .4s ease}
 .pcard:hover .thumb img{transform:scale(1.04)}
+.thumb.photo img{object-fit:cover; padding:0}
 .pbody{padding:18px 18px 20px; display:flex; flex-direction:column; gap:10px; flex:1}
 .ptag{font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--amber)}
 .pcard h3{font-family:var(--serif); font-weight:600; font-size:19px; line-height:1.3; margin:0; color:var(--ink); transition:color .2s}
@@ -256,7 +257,7 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:6p
         <p class="eyebrow">About</p>
         <h2>About me</h2>
         <p>I completed my BS in Electrical Engineering (electronics stream) at FAST-NUCES Karachi in 2023. Since 2024 I have worked as an instructor in the Department of Computer Science at FAST-NUCES, where I run undergraduate labs and write lab manuals and assessments.</p>
-        <p>My final-year project ran fire detection on a Raspberry Pi and steered a camera toward the flame. My recent projects use public data and open code to study energy problems that matter in Pakistan, such as load-shedding, hot summers and the growth of electric two-wheelers.</p>
+        <p>My final-year group project detected fire with a camera on a Raspberry Pi and used servo motors to aim a water nozzle at it. My recent projects use public data and open code to study energy problems that matter in Pakistan, such as load-shedding, hot summers and the growth of electric two-wheelers.</p>
         <div class="interests"><span class="chip">Power systems</span><span class="chip">E-mobility</span><span class="chip">PV and battery storage</span><span class="chip">Power electronics reliability</span><span class="chip">Energy data</span></div>
       </div>
       <div class="card quick rv">
@@ -331,10 +332,12 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:6p
           </div>
         </article>
         <article class="card pcard rv">
+          <div class="thumb photo"><img src="img/fyp.jpg" alt="The fire suppression prototype: Raspberry Pi 4, camera on a servo mount, relay module and power bank on a wooden board" loading="lazy"></div>
           <div class="pbody">
-            <span class="ptag">Final-year project &middot; 2023</span>
-            <h3>Fire detection and tracking on a Raspberry Pi</h3>
-            <p>A TensorFlow Lite model runs on every camera frame, and a servo turns the camera to follow the flame, all on the device.</p>
+            <span class="ptag">Final-year project &middot; 2023 &middot; team of three</span>
+            <h3>AI-based fire detection and suppression on a Raspberry Pi</h3>
+            <p>A Raspberry Pi 4 with an 8 MP camera runs a TensorFlow Lite detector trained on 5,599 indoor images of fire and light that we recorded and labelled ourselves. When it finds fire, servo motors aim a water nozzle and a relay starts a 12 V pump.</p>
+            <div class="nums"><span class="num">Raspberry Pi 4</span><span class="num">TensorFlow Lite</span><span class="num">5,599 own images</span></div>
           </div>
         </article>
       </div>
